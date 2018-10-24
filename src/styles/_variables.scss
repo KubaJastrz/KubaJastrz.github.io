@@ -1,0 +1,18 @@
+// Colors
+$dark-blue: #233f68;
+$bright-blue: #f2f5ff;
+
+$bg: $dark-blue;
+$text: $bright-blue;
+
+// Fonts
+$serif: Georgia, serif;
+$font: 'Roboto Slab', $serif;
+
+// Responsive sizes
+$size-thresholds: (
+    wide: 1920px,
+    desktop: 1366px,
+    tablet: 768px,
+    mobile: 320px,
+);
