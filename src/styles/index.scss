@@ -30,7 +30,7 @@ body {
     }
 
     &__title {
-        text-shadow: rem(2px) rem(2px) rgba(darken($text, 7%), 0.4);
+        text-shadow: rem(2px) rem(2px) rgba(#000, 0.08);
         font-size: rem(40px);
 
         @include respond-from(tablet) {
