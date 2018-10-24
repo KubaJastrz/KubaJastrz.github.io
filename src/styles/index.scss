@@ -18,10 +18,11 @@ body {
 
     &__background {
         $offset: 250px;
+
         position: absolute;
-        top: rem(-$offset);
+        top: rem(-$offset * 2);
         right: rem(-$offset);
-        bottom: rem(-$offset);
+        bottom: rem(-$offset * 2);
         left: rem(-$offset);
         animation: hue 30s infinite linear;
         z-index: -1;
