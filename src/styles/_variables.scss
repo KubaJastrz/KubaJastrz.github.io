@@ -1,18 +1,19 @@
 // Colors
-$dark-blue: #233f68;
-$bright-blue: #f2f5ff;
+$color-green: #76c659;
+$color-blue: #6abbdc;
+$color-yellow: #deb60c;
+$color-orange: #ff521b;
+$color-white: #f9f9f9;
+$color-black: #222;
 
-$bg: $dark-blue;
-$text: $bright-blue;
-
-// Fonts
-$serif: Georgia, serif;
-$font: 'Roboto Slab', $serif;
+$color-background: $color-white;
+$color-text: $color-black;
 
 // Responsive sizes
 $size-thresholds: (
     wide: 1920px,
     desktop: 1366px,
     tablet: 768px,
-    mobile: 320px,
+    mobile-large: 425px,
+    mobile: 320px
 );
