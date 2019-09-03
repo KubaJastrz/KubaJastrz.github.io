@@ -1,56 +1,10 @@
-@import './variables';
 @import './helpers';
 @import './reset';
+@import './page';
 
 body {
-    display: flex;
-    color: $text;
-    font-family: $font;
-}
-
-.page-content {
-    display: flex;
-    position: relative;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-    &__background {
-        $offset: 250px;
-
-        position: absolute;
-        top: rem(-$offset * 2);
-        right: rem(-$offset);
-        bottom: rem(-$offset * 2);
-        left: rem(-$offset);
-        animation: hue 30s infinite linear;
-        z-index: -1;
-        background: linear-gradient(70deg, #3d7eaa, #ffe47a);
-    }
-
-    &__title {
-        text-shadow: rem(2px) rem(2px) rgba(#000, 0.08);
-        font-size: rem(40px);
-
-        @include respond-from(tablet) {
-            font-size: rem(50px);
-        }
-    }
-}
-
-@keyframes hue {
-    0% {
-        transform: rotate(0);
-        filter: hue-rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(30deg);
-    }
-
-    100% {
-        transform: rotate(0);
-        filter: hue-rotate(360deg);
-    }
+    color: $color-text;
+    background: $color-background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

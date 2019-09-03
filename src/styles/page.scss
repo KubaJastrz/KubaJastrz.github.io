@@ -1,0 +1,57 @@
+@import './helpers';
+
+body {
+    padding: 16px 12px;
+
+    @include respond-from(tablet) {
+        padding: 30px 24px;
+    }
+}
+
+.page-header {
+    > .title {
+        text-shadow: rem(2px) rem(2px) rgba($color-black, 0.14);
+        font-size: rem(28px);
+
+        @include respond-from(mobile-large) {
+            font-size: rem(34px);
+        }
+    }
+
+    > .subtitle {
+        @include text-gradient(
+            120deg,
+            $color-blue 10%,
+            $color-green 35%,
+            $color-yellow 70%,
+            $color-orange 110%
+        );
+
+        display: inline-block;
+        margin-top: 0.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: rem(14px);
+        background-size: 500% 100%;
+        animation: subtitle-gradient 40s ease infinite;
+
+        @include respond-from(mobile-large) {
+            font-size: rem(17px);
+        }
+    }
+}
+
+.page-content {
+}
+
+@keyframes subtitle-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
