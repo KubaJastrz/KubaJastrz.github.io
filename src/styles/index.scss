@@ -1,10 +1,21 @@
 @import './helpers';
 @import './reset';
-@import './page';
+
+@import './home';
 
 body {
     color: $color-text;
     background: $color-background;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
