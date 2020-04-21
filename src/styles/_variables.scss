@@ -3,17 +3,22 @@ $color-green: #76c659;
 $color-blue: #6abbdc;
 $color-yellow: #deb60c;
 $color-orange: #ff521b;
-$color-white: #f9f9f9;
-$color-black: #222;
+$color-bright: #fff;
+$color-dark: #0f0f0f;
 
-$color-background: $color-white;
-$color-text: $color-black;
+$color-active: #f37616;
+$color-background: $color-dark;
+$color-text: $color-bright;
 
 // Responsive sizes
 $size-thresholds: (
-    wide: 1920px,
-    desktop: 1366px,
-    tablet: 768px,
-    mobile-large: 425px,
-    mobile: 320px
+  wide: 1920px,
+  desktop: 1366px,
+  tablet: 768px,
+  mobile-large: 425px,
 );
+
+// Fonts
+$font-sans: Manrope, sans-serif;
+$font-system: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji';

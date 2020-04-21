@@ -1,76 +1,88 @@
 @import './helpers';
 
-body {
-    padding: rem(16px) rem(12px);
+.page-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20vh rem(14px) rem(14px);
 
-    @include respond-from(tablet) {
-        padding: rem(30px) rem(24px);
-    }
+  @include respond-from(mobile-large) {
+    padding-top: rem(14px);
+    align-items: center;
+  }
 }
 
 .page-header {
-    > .title {
-        text-shadow: rem(2px) rem(2px) rgba($color-black, 0.14);
-        font-size: rem(28px);
+  text-align: center;
 
-        @include respond-from(mobile-large) {
-            font-size: rem(34px);
-        }
+  > .title {
+    text-shadow: rem(2px) rem(2px) rgba($color-bright, 0.2);
+    font-size: rem(28px);
+    text-transform: uppercase;
+    letter-spacing: rem(0.4px);
+
+    @include respond-from(mobile-large) {
+      font-size: rem(38px);
     }
+  }
 
-    > .subtitle {
-        @include text-gradient(
-            120deg,
-            $color-blue 10%,
-            $color-green 35%,
-            $color-yellow 70%,
-            $color-orange 110%
-        );
+  > .subtitle {
+    @include text-gradient(
+      120deg,
+      $color-blue 10%,
+      $color-green 35%,
+      $color-yellow 70%,
+      $color-orange 110%
+    );
 
-        display: inline-block;
-        margin-top: 0.5em;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: rem(14px);
-        background-size: 500% 100%;
-        animation: subtitle-gradient 40s ease infinite;
+    display: inline-block;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: rem(15px);
+    background-size: 500% 100%;
+    animation: subtitle-gradient 40s ease infinite;
 
-        @include respond-from(mobile-large) {
-            font-size: rem(17px);
-        }
+    @include respond-from(mobile-large) {
+      font-size: rem(20px);
     }
+  }
 }
 
-.page-content {
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin: rem(12px) 0 0;
+  padding: 0;
+
+  @include respond-from(mobile-large) {
     margin-top: rem(20px);
+  }
 
-    > .section {
-        margin-bottom: rem(8px);
+  > .item {
+    margin-left: rem(8px);
+    list-style-type: none;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+    &:first-child {
+      margin-left: 0;
     }
+  }
 }
 
-.content-list {
-    > .item {
-        padding-bottom: rem(6px);
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+.social-link {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
 }
 
 @keyframes subtitle-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

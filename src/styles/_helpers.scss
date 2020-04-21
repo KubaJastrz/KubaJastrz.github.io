@@ -1,23 +1,23 @@
 @import './variables';
 
 @function rem($value-in-px) {
-    @return 1rem * ($value-in-px / 10px);
+  @return 1rem * ($value-in-px / 10px);
 }
 
 @mixin respond-from($breakpoint) {
-    @if type-of($breakpoint) == string {
-        @media screen and (min-width: map-get($size-thresholds, $breakpoint)) {
-            @content;
-        }
-    } @else {
-        @media screen and (min-width: $breakpoint) {
-            @content;
-        }
+  @if type-of($breakpoint) == string {
+    @media screen and (min-width: map-get($size-thresholds, $breakpoint)) {
+      @content;
     }
+  } @else {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
 }
 
 @mixin text-gradient($values...) {
-    background: linear-gradient($values);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient($values);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
