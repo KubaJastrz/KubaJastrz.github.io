@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    color: theme('colors.text');
+    background-color: theme('colors.bg');
+  }
+
+  pre {
+    opacity: 0.98;
+    background: rgba(200, 200, 255, 0.05);
+    padding: 0.75rem 0;
+    line-height: 2;
+  }
+
+  pre > code {
+    display: grid;
+  }
+
+  pre > code .word {
+    background: rgba(200, 200, 255, 0.15);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  pre > code > .line {
+    padding: 0 1.25rem;
+    border-left: 2px solid transparent;
+  }
+
+  pre > code > .line.highlighted {
+    background: rgba(200, 200, 255, 0.1);
+    border-left-color: theme('colors.accent');
+  }
+
+  :not(pre) > code {
+    padding: 0.25rem;
+    font-size: 0.95rem !important;
+    border-radius: 0.25rem;
+  }
+}
+
+@layer components {
+  .noise-container {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .noise {
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/noise.webp);
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+    filter: invert(0.5);
+    pointer-events: none;
+    z-index: -20;
+  }
+}

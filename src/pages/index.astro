@@ -1,0 +1,39 @@
+---
+import BaseHead from '~/components/head/base-head.astro';
+import Layout from '~/layouts/base.astro';
+---
+
+<Layout>
+  <BaseHead
+    slot="head"
+    title="Jakub Jastrzębski - Web Developer"
+    description="Frontend Web Developer"
+  />
+
+  <header class="grid flex-1 place-content-center">
+    <div class="space-y-2">
+      <div class="space-y-2 border-4 p-8 text-center">
+        <h1 class="text-3xl font-bold uppercase">Jakub Jastrzębski</h1>
+        <p>Frontend Web Developer</p>
+      </div>
+      <nav>
+        <ul class="flex justify-between">
+          <li>
+            <a class="hover:underline" href="https://github.com/KubaJastrz/resources/issues"
+              >Resources</a
+            >
+          </li>
+          <li>
+            <a class="hover:underline" href="https://github.com/KubaJastrz">GitHub</a>
+          </li>
+          <li>
+            <a class="hover:underline" href="https://twitter.com/kuba_jastrz">Twitter</a>
+          </li>
+          <li>
+            <a class="hover:underline" href="https://linkedin.com/in/kuba-jastrz">LinkedIn</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import './style.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <slot name="head" />
+  </head>
+  <body class="noise-container flex flex-col">
+    <div class="noise"></div>
+    <slot />
+  </body>
+</html>

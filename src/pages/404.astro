@@ -1,0 +1,24 @@
+---
+import BaseHead from '~/components/head/base-head.astro';
+import Layout from '~/layouts/base.astro';
+---
+
+<Layout>
+  <BaseHead
+    slot="head"
+    title="Not Found"
+    description="Jakub Jastrzębski - Frontend Web Developer"
+  />
+
+  <header class="grid flex-1 place-content-center">
+    <div class="space-y-8 text-center">
+      <div class="space-y-2">
+        <h1 class="text-4xl font-bold">404</h1>
+        <p>Page not found</p>
+      </div>
+      <p>
+        <a href="/" class="font-bold hover:underline">← Go back home</a>
+      </p>
+    </div>
+  </header>
+</Layout>
