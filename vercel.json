@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/emperor",
+      "destination": "https://kubajastrz.github.io/eslint-config-emperor/",
+      "permanent": false
+    }
+  ]
+}
